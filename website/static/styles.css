@@ -1,0 +1,24 @@
+body {
+    font-family: helvetica;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+}
+
+footer div {
+    color: white;
+}
+
+.content-wrap {
+    padding-bottom: 5rem;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
