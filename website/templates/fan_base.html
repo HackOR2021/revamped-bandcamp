@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+
+        <script
+             src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+
+        <script 
+            src="{{ url_for('static', filename='bootstrap.js')}}">
+        </script>
+
+
+        
+
+        <title>{% block title %}Home{% endblock %}</title>
+    </head>
+    <body>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+           <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbar"
+            >
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                   <li class="nav-item">
+                        <a class="nav-link" id="login" href="/">home</a>
+                   </li>
+                   <li class="nav-item">
+                    <a class="nav-link" id="dashboard" href="/dashboard">dashboard</a>
+                    </li>
+                   <li class="nav-item">
+                        <a class="nav-link" id="dashboard" href="/explore">explore</a>
+                   </li>
+                   <li class="nav-item">
+                        <a class="nav-link" id="dashboard" href="/tracks">tracks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="dashboard" href="/shows">shows</a>
+                   </li>
+                   
+               </ul>
+           </div>
+       </nav>
+
+       <div class="page-container">
+       <div class="container content-wrap">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+       <footer class="bg-dark text-center text-lg-start">
+      
+        <div class="text-center p-3">
+          © 2021 minerva
+        </div>
+      </footer>
+      </div>
+
+    </body>
+</html>
