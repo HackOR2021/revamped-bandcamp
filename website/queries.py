@@ -193,3 +193,12 @@ def add_artist(first_name, last_name, email, website, city, state, profile_image
 
 
 
+def save_to_db(file, name):
+    """
+    Saves a file to he database
+    """
+    db = connect_minerva_db()
+
+    db.save_file(file.filename, file)
+
+    db.test.insert({'album_name': name, 'album_cover_image': file})

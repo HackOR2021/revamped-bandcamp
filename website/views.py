@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 # import mongo
 from website import mongo
@@ -35,7 +35,24 @@ def edit_tracks():
 
     return render_template("edit_track.html", tracks=tracks_to_edit)
 
-
 @views.route('/view-tracks')
 def view_tracks():
     return render_template("view_tracks.html")
+
+
+# just a place for Asa to work on troubleshooting uploading to mongodb
+@views.route('/upload-test')
+def upload_audio():
+    return render_template("upload_test.html")
+
+# place for uploading an actual file
+@views.route('/create', methods=['POST'])
+def create():
+    if 'album_cover' in request.files:
+        album_cover = request.files['album_cover']
+        album_name = request.form.get('album_name')
+        dbq.save_to_db(file=album_cover, name=album_name)
+
+    return render_template("upload_test.html")
+
+

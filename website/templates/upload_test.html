@@ -1,0 +1,11 @@
+{% extends "artist_base.html" %} {% block title %}Upload Test{% endblock %}
+
+{% block content %}
+<form method="POST" action="/create" enctype="multipart/form-data">
+	
+	<input type="text" name="album_name">
+	<input type="file" name="album_cover">
+	<input type="submit" name="">
+
+</form>
+{% endblock %}
