@@ -22,3 +22,20 @@ footer div {
     min-height: 100vh;
 }
 
+
+/* sidescroll for data demo */
+/* source https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row*/
+.testimonial-group > .row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.testimonial-group > .row > .col-xs-4 {
+  flex: 0 0 auto;
+}
+
+/* Decorations */
+.col-xs-4 { color: #fff; font-size: 48px; padding-bottom: 20px; padding-top: 18px; }
+.col-xs-4:nth-child(3n+1) { background: #c69; }
+.col-xs-4:nth-child(3n+2) { background: #9c6; }
+.col-xs-4:nth-child(3n+3) { background: #69c; }
