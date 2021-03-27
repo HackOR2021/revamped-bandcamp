@@ -151,14 +151,17 @@ def add_track(track_artist, track_name, track_description, track_genre,
     
 def add_album():
     # Adds an album to the database
-    db = connect_minerva_db()
-    new_album = {}
-    return db.albums.insert_one(new_album)
+    pass
 
-def add_fan():
+def add_fan(fan_username, fan_password, fan_first_name, fan_last_name):
     # Adds a fan to the database
     db = connect_minerva_db()
-    new_fan = {}
+    new_fan = {"fan_username": fan_username,
+     "fan_password": fan_password,
+     "fan_first_name": fan_first_name,
+     "fan_last_name": fan_last_name
+     }
+
     return db.fans.insert_one(new_fan)
 
 def add_show(show_date, show_time, show_name, show_artist, show_description, show_link):
