@@ -24,4 +24,42 @@
 </div>
 
 
+<h4>Highlighted Tracks</h4>
+<div class="container testimonial-group">
+  <div class="row text-center">
+    {% for track in tracks %}
+
+		<div class="col-4 card">
+			<h6><b>Artist:</b> {{ artist["first_name"] }} {{ artist["last_name"] }}</h6>
+			<p><b>Website:</b> {{ artist["website"] }}</p>
+			<p><b>Email:</b> {{ artist["email"] }}</p>
+			<p><b>Location:</b> {{ artist["city"] }}, {{ artist["state"] }}</p>
+
+			<img src="{{ artist["profile_image"] }}" width="50" height="50">
+		</div>
+
+	{% endfor %}
+  </div>
+</div>
+
+
+<h4>Upcoming Shows</h4>
+<div class="container testimonial-group">
+  <div class="row text-center">
+    {% for show in shows %}
+
+		<div class="col-4 card">
+			<h6><b>Artist:</b> {{ artist["first_name"] }} {{ artist["last_name"] }}</h6>
+			<p><b>Website:</b> {{ artist["website"] }}</p>
+			<p><b>Email:</b> {{ artist["email"] }}</p>
+			<p><b>Location:</b> {{ artist["city"] }}, {{ artist["state"] }}</p>
+
+			<img src="{{ artist["profile_image"] }}" width="50" height="50">
+		</div>
+
+	{% endfor %}
+  </div>
+</div>
+
+
 {% endblock %}
