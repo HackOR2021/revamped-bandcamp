@@ -5,16 +5,16 @@
 
 <ul id="navigation">
 {% for artist in artists %}
-    <!-- <li><{{ artist['id'] }}</li> -->
-    <li>{{ artist["first_name"] }} {{ artist["last_name"] }}</li>
-    <li>{{ artist["first_name"] }}</li>
-    <li></li>
-    <li>{{ artist["email"] }}</li>
-    <li>{{ artist["website"] }}</li>
-    <li>{{ artist["city"] }}</li>
-    <li>{{ artist["profile_image"] }}</li>
-    <li>{{ artist["first_name"] }}</li>
-    <li>{{ artist }}</li>
+
+	<div class="card">
+		<h6><b>Artist:</b> {{ artist["first_name"] }} {{ artist["last_name"] }}</h6>
+		<p><b>Website:</b> {{ artist["website"] }}</p>
+		<p><b>Email:</b> {{ artist["email"] }}</p>
+		<p><b>Location:</b> {{ artist["city"] }}, {{ artist["state"] }}</p>
+
+		<img src="{{ artist["profile_image"] }}" width="50" height="50">
+	</div>
+
 {% endfor %}
 </ul>
 
