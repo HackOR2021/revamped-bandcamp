@@ -2,4 +2,12 @@
 
 {% block content %}
 <h1>This is the fan homepage</h1>
+
+<ul id="navigation">
+{% for artist in artists %}
+    <li><{{ artist['first_name'] }} {{ artist['last_name'] }}</li>
+{% endfor %}
+</ul>
+
+
 {% endblock %}
