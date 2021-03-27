@@ -149,3 +149,37 @@ def add_track(track_artist, track_name, track_description, track_genre,
     # return the track id of the newly added track
     return track_id
     
+def add_album():
+    # Adds an album to the database
+    db = connect_minerva_db()
+    new_album = {}
+    return db.albums.insert_one(new_album)
+
+def add_fan():
+    # Adds a fan to the database
+    db = connect_minerva_db()
+    new_fan = {}
+    return db.fans.insert_one(new_fan)
+
+def add_show():
+    # Adds a show to the database
+    db = connect_minerva_db()
+    new_show = {}
+    return db.shows.insert_one(new_show)
+
+def add_artist(first_name, last_name, email, website, city, state, profile_image):
+    # Adds an artist to the database
+    db = connect_minerva_db()
+    new_artist = {
+        "first_name": first_name,
+        "last_name": last_name,
+        "email": email,
+        "website": website,
+        "city": city,
+        "state": state,
+        "profile_image": profile_image
+   }
+    return db.tracks.insert_one(new_artist)
+
+
+
