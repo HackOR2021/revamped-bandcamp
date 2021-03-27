@@ -43,23 +43,22 @@
 </div>
 
 
-<!-- <h4>Upcoming Shows</h4>
+<h4>Upcoming Shows</h4>
 <div class="container testimonial-group">
   <div class="row text-center">
     {% for show in shows %}
 
 		<div class="col-4 card">
-			<h6><b>Artist:</b> {{ show["first_name"] }} {{ show["last_name"] }}</h6>
-			<p><b>Website:</b> {{ show["website"] }}</p>
-			<p><b>Email:</b> {{ show["email"] }}</p>
-			<p><b>Location:</b> {{ show["city"] }}, {{ show["state"] }}</p>
-
-			<img src="{{ show["profile_image"] }}" width="50" height="50">
+			<h5>{{ show["show_name"] }}</h5>
+			<h6>{{ show["show_artist"] }}</h6>
+			<p>{{ show["show_description"] }}</p>
+			<h6><b>When:</b> {{ show["show_date"] }}: {{ show["show_time"] }}</h6>
+			<p><b>Link:</b> <a href="">{{ show["show_link"] }}</a></p>
 		</div>
 
 	{% endfor %}
   </div>
-</div> -->
+</div>
 
 
 {% endblock %}
