@@ -1,0 +1,56 @@
+{% extends "artist_base.html" %} {% block title %}Artist Home{% endblock %}
+
+{% block content %}
+<h1>edit tracks</h1>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p>singles</p>
+            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                no time 4 REST
+            </button>
+        </div>
+        <div class="col-md-6">
+            <p>albums</p>
+            <button class="btn btn-dark">lua-ve is in the air tonight</button>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">edit track details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                    <form method="POST">
+                        <label for="track-name">track name</label>
+                        <input type="text" name="track-name" class="form-control">
+                        <br>
+                        <label for="track-description">track description</label>
+                        <textarea name="track-description" rows="3" class="form-control"></textarea>
+                        <br>
+                        <label for="track-genre">track genre</label>
+                        <input type="text" name="track-genre" class="form-control">
+                  </div>
+                  <div class="col-md-6">
+
+                    </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
