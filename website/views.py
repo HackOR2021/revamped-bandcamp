@@ -13,8 +13,8 @@ views = Blueprint('views', __name__)
 @views.route('/')
 def home():
 
-    # load all artists from database
-    db_artists = dbq.get_artists()
+    # load ten artists from database
+    db_artists = dbq.get_ten_artists()
     return render_template("index.html", artists = db_artists)
 
 @views.route('/artist-home')
@@ -28,3 +28,8 @@ def add_tracks():
 @views.route('/edit-tracks')
 def edit_tracks():
     return render_template("edit_track.html")
+
+
+@views.route('/view-tracks')
+def view_tracks():
+    return render_template("view_tracks.html")
