@@ -35,6 +35,10 @@ def edit_tracks():
 
     return render_template("edit_track.html", tracks=tracks_to_edit)
 
+@views.route('/add-shows')
+def add_shows():
+    return render_template("new_show.html")
+
 @views.route('/view-tracks')
 def view_tracks():
     return render_template("view_tracks.html")

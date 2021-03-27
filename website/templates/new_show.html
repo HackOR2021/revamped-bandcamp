@@ -1,0 +1,56 @@
+{% extends "artist_base.html" %} {% block title %}Add Shows{% endblock %}
+
+{% block content %}
+<h1>new show</h1>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="POST">
+                <label for="show-name">show name</label>
+                    <input type="text" name="show-name" placeholder="enter show title" class="form-control">
+                <br>
+                <label for="show-description">show description</label>
+                    <textarea name="show-description" placeholder="tell people what to expect watching your amazing show" class="form-control" rows="3"></textarea>
+                <br>
+                <label for="show-genre">show genre</label>
+                    <input type="text" name="show-genre" placeholder="separate with commas" class="form-control">
+                <br>
+                
+                <label for="track-date">track date</label>
+                    <input type="date" name="track-date" class="form-control">
+                <br>
+                <label for="show-link">show live link</label>
+                    <input type="text" name="show-link" placeholder="paste link here" class="form-control">
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="show-date">date</label>
+                            <input type="date" name="show-date" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="show-time">time</label>
+                            <input type="time" name="show-time" class="form-control">
+                    </div>
+                </div>
+
+        </div>
+        <div class="col-md-6">
+            <label for="pricing">pricing</label>
+                </span><input type="number" name="pricing" placeholder="0.00" class="form-control">
+                <span>*leave price empty for free entry</span>
+            <br><br>
+            <input type="radio" name="privacy" id="public" value="public">
+            <label for="public">public</label>
+            <input type="radio" name="privacy" id="private" value="private">
+            <label for="private">private</label>
+            <br><br>
+            <span>
+                <button class="btn btn-dark">save draft</button>
+                <button class="btn btn-dark">publish</button>
+            </span>    
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
