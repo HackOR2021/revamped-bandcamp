@@ -161,10 +161,17 @@ def add_fan():
     new_fan = {}
     return db.fans.insert_one(new_fan)
 
-def add_show():
+def add_show(show_date, show_time, show_name, show_artist, show_description, show_link):
     # Adds a show to the database
     db = connect_minerva_db()
-    new_show = {}
+    new_show = {"show_date": show_date, 
+    "show_time": show_time, 
+    "show_name": show_name, 
+    "show_artist": show_artist, 
+    "show_description": show_description, 
+    "show_link": show_link
+    }
+
     return db.shows.insert_one(new_show)
 
 def add_artist(first_name, last_name, email, website, city, state, profile_image):
