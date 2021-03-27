@@ -29,7 +29,11 @@ def add_tracks():
 
 @views.route('/edit-tracks')
 def edit_tracks():
-    return render_template("edit_track.html")
+
+    # load some tracks to edit
+    tracks_to_edit = dbq.get_ten_tracks()
+
+    return render_template("edit_track.html", tracks=tracks_to_edit)
 
 
 @views.route('/view-tracks')

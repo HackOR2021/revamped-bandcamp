@@ -5,16 +5,22 @@
 <hr>
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <p>singles</p>
-            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                no time 4 REST
-            </button>
-        </div>
-        <div class="col-md-6">
-            <p>albums</p>
-            <button class="btn btn-dark">lua-ve is in the air tonight</button>
-        </div>
+
+        
+          <div class="col-md-6">
+              <p>singles</p>
+              {% for track in tracks %}
+              <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" data-track-description='{{track["track_description"]}}'>
+
+                  {{ track["track_name"] }}
+              </button>
+              {% endfor %}
+          </div>
+          <div class="col-md-6">
+              <p>albums</p>
+              <button class="btn btn-dark">lua-ve is in the air tonight</button>
+          </div>
+        
     </div>
 </div>
 <!-- Modal -->
