@@ -20,3 +20,58 @@ def get_artists():
 	# return all the artists as a list
     artists = list(db.artists.find())
     return artists
+
+
+
+def get_tracks():
+	"""
+	Returns all tracks on the minerva DB
+	"""
+
+	# connect to the database
+	db = connect_minerva_db()
+
+	# return all the tracks as a list
+	tracks = list(db.tracks.find())
+	return tracks
+
+
+def get_fans():
+	"""
+	Returns all fans on the minerva DB
+	"""
+
+	# connect to the database
+	db = connect_minerva_db()
+
+	# return all the fans as a list
+	fans = list(db.fans.find())
+	return fans
+
+
+def get_albums():
+	"""
+	Returns all albums on the minerva DB
+	"""
+
+	# connect to the database
+	db = connect_minerva_db()
+
+	# return all the albums as a list
+	albums = list(db.albums.find())
+	return albums
+
+
+def get_shows():
+	"""
+	Returns all shows on the minerva DB
+	"""
+
+	# connect to the database
+	db = connect_minerva_db()
+
+	# return all the shows as a list
+	shows = list(db.shows.find())
+	return shows
+
+
