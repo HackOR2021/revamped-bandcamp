@@ -1,0 +1,55 @@
+{% extends "artist_base.html" %} {% block title %}Artist Home{% endblock %}
+
+{% block content %}
+<h1>new track</h1>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="POST">
+                <label for="track-name">track name</label>
+                    <input type="text" name="track-name" placeholder="enter track title" class="form-control">
+                <br>
+                <label for="track-description">track description</label>
+                    <textarea name="track-description" placeholder="describe your amazing track" class="form-control" rows="3"></textarea>
+                <br>
+                <label for="track-genre">track genre</label>
+                    <input type="text" name="track-genre" placeholder="separate with commas" class="form-control">
+                <br>
+                <span>
+                <button class="btn btn-dark">+ upload audio</button>
+                <button class="btn btn-dark">+ upload artwork</button>
+                </span>
+                <br><br>
+                <label for="track-date">track date</label>
+                    <input type="date" name="track-date" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label for="pricing">pricing</label>
+                </span><input type="number" name="pricing" placeholder="0.00" class="form-control">
+                <span>*leave price empty for free download</span>
+            <br>
+            <label for="preview-len">preview length</label>
+                <select name="preview-len" class="form-control">
+                    <option value="0" selected>none</option>
+                    <option value="">30 seconds</option>
+                    <option value="">1 minute</option>
+                </select>
+            <br>
+            <label for="track-credits">track credits</label>
+                <input type="text" name="track-credits" placeholder="who helped make this smash?" class="form-control">
+            <br>
+            <input type="radio" name="privacy" id="public" value="public">
+            <label for="public">public</label>
+            <input type="radio" name="privacy" id="private" value="private">
+            <label for="private">private</label>
+            <br><br>
+            <span>
+                <button class="btn btn-dark">save draft</button>
+                <button class="btn btn-dark">publish</button>
+            </span>    
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
