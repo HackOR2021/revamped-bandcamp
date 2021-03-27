@@ -21,7 +21,16 @@ def get_artists():
     artists = list(db.artists.find())
     return artists
 
+def get_ten_artists():
+    """
+    Returns ten artists from the minerva DB
+    """
+    # Connect to database
+    db = connect_minerva_db()
 
+    # return all the artists as a list
+    ten_artists = list(db.artists.find().limit(10))
+    return ten_artists
 
 def get_tracks():
     """
@@ -75,15 +84,33 @@ def get_shows():
     return shows
 
 
-def add_track()
+def add_track(track_artist, track_name, track_description, track_genre, 
+    track_audio, track_artwork, track_pricing, track_date, track_price, track_credits, is_public):
+    """
+    Provided track details, add a new track to Minerva
+    """
 
-    track_name
-    track_description
-    track_genre
-    audio
-    artwork
-    pricing
-    track_date
-    track_price
-    track_credits
-    is_public
+    # connect to the database
+    db = connect_minerva_db()   
+
+    # package up the track details
+    new_track = {
+            "track_artist": track_artist,
+            "track_name": track_name,
+            "track_description": track_description,
+            "track_genre": track_genre,
+            "track_audio": track_audio,
+            "track_artwork": track_artwork,
+            "track_pricing": track_pricing,
+            "track_date": track_date,
+            "track_price": track_price,
+            "track_credits": track_credits,
+            "is_public": is_public
+        }
+
+    # add the track to the database
+    track_id = db.tracks.insert_one(new_track)
+
+    # return the track id of the newly added track
+    return track_id
+    
