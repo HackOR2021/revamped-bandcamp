@@ -1,6 +1,10 @@
+/* || Sitewide */
+
 body {
     font-family: helvetica;
 }
+
+/* || Sitewide - Footer */
 
 footer {
     position: absolute;
@@ -17,11 +21,22 @@ footer div {
     padding-bottom: 5rem;
 }
 
+
+
 .page-container {
     position: relative;
     min-height: 100vh;
 }
 
+/* || Edit tracks (artist) */
+
+.edit-btns {
+    width: 60%;
+    margin-bottom: 1%;
+    text-align: left;
+}
+
+/* || Date Demo (Fans homepage) */
 
 /* sidescroll for data demo */
 /* source https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row*/
