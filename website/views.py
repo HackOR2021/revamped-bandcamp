@@ -39,6 +39,12 @@ def edit_tracks():
 def add_shows():
     return render_template("new_show.html")
 
+@views.route('/edit-shows')
+def edit_shows():
+
+    shows_to_edit = dbq.get_ten_shows()
+    return render_template('edit_show.html', shows=shows_to_edit)
+
 @views.route('/view-tracks')
 def view_tracks():
     return render_template("view_tracks.html")

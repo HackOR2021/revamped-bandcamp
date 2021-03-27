@@ -1,0 +1,87 @@
+{% extends "artist_base.html" %} {% block title %}edit shows{% endblock %}
+
+{% block content %}
+<h1>edit shows</h1>
+<hr>
+<div class="container">
+    <div class="row">
+          <div class="col-md-6">
+              <span>upcoming shows</span>
+              <br>
+              <!-- Button for each show -->
+              {% for show in shows %}
+              <button class="btn btn-dark edit-btns" data-bs-toggle="modal" data-bs-target="#modal{{ show['_id'] }}">
+
+                  {{ show["show_name"] }}
+              </button>
+              <br>
+              {% endfor %}
+          </div>
+        
+    </div>
+</div>
+
+{% for show in shows %}
+<!-- Modal -->
+<div class="modal fade" id="modal{{ show['_id'] }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">edit show details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                    <form method="POST">
+                        <label for="show-name">show name</label>
+                        <input type="text" name="show-name" class="form-control" placeholder="{{ show['show_name'] }}">
+                        <br>
+                        <label for="show-description">show description</label>
+                        <textarea name="show-description" rows="3" class="form-control" placeholder="{{ show['show_description'] }}"></textarea>
+                        <br>
+                        <label for="show-genre">show genre</label>
+                        <input type="text" name="show-genre" class="form-control" placeholder="{{ show['show_genre'] }}">
+                        <br>
+
+                        <label for="show-link">show live link</label>
+                        <input type="text" name="show-link" class="form-control" placeholder="{{ show['show_link'] }}">
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="show-date">date</label>
+                                    <input type="date" name="show-date" class="form-control" placeholder="{{ show['show_date'] }}">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="show-time">time</label>
+                                    <input type="time" name="show-time" class="form-control" placeholder="{{ show['show_time'] }}">
+                            </div>
+                        </div>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="pricing">pricing</label>
+                      <input type="number" name="pricing" class="form-control">
+                      <br>
+
+                      <input type="radio" name="privacy" id="public" value="public">
+                      <label for="public">public</label>
+                      <input type="radio" name="privacy" id="private" value="private">
+                      <label for="private">private</label>
+
+                    </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark">save draft</button>
+          <button type="button" class="btn btn-dark">publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
+  {% endfor %}
+{% endblock %}
