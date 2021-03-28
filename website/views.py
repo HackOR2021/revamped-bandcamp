@@ -10,6 +10,8 @@ import website.queries as dbq
 
 views = Blueprint('views', __name__)
 
+# Fan routes
+
 @views.route('/')
 def home():
 
@@ -18,6 +20,12 @@ def home():
     db_tracks = dbq.get_ten_tracks()
     db_shows = dbq.get_ten_shows()
     return render_template("index.html", artists = db_artists, tracks=db_tracks, shows=db_shows)
+
+@views.route('/fan-dashboard')
+def fan_dashboard():
+    return render_template('fan_dashboard.html')
+
+# Artist routes
 
 @views.route('/artist-home')
 def artist_home():
@@ -34,6 +42,31 @@ def edit_tracks():
     tracks_to_edit = dbq.get_ten_tracks()
 
     return render_template("edit_track.html", tracks=tracks_to_edit)
+
+@views.route('/edit-tracks', methods = ['POST'])
+def add_track_form():
+    print(request.files)
+    if 'track_artwork' in request.files:
+        track_artwork = request.files['track_artwork']
+        mongo.save_file(track_artwork.filename, track_artwork)
+        artwork = track_artwork.filename
+    else:
+        artwork = ""
+
+    artist = 'none'
+    name = request.form['track-name']
+    description = request.form['track-description']
+    genre = request.form['track-genre']
+    audio = True
+    pricing = request.form['pricing']
+    date = request.form['track-date']
+    credit = request.form['track-credits']
+    privacy = True
+
+    new_track = dbq.add_track(artist, name, description, genre, audio, artwork, pricing, date, credit, privacy)
+    tracks_to_edit = dbq.get_tracks()
+    return render_template('edit_track.html', tracks=tracks_to_edit)
+
 
 @views.route('/add-shows')
 def add_shows():
@@ -64,5 +97,6 @@ def create():
         dbq.save_to_db(file=album_cover, name=album_name)
 
     return render_template("upload_test.html")
+
 
 

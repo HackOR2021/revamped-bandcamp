@@ -1,4 +1,4 @@
-{% extends "artist_base.html" %} {% block title %}Artist Home{% endblock %}
+{% extends "artist_base.html" %} {% block title %}new track{% endblock %}
 
 {% block content %}
 <h1>new track</h1>
@@ -6,9 +6,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <form method="POST">
+            <form method="POST" action="/edit-tracks" enctype="multipart/form-data">
                 <label for="track-name">track name</label>
-                    <input type="text" name="track-name" placeholder="enter track title" class="form-control">
+                    <input type="text" name="track-name" placeholder="enter track title" class="form-control" required>
                 <br>
                 <label for="track-description">track description</label>
                     <textarea name="track-description" placeholder="describe your amazing track" class="form-control" rows="3"></textarea>
@@ -16,11 +16,16 @@
                 <label for="track-genre">track genre</label>
                     <input type="text" name="track-genre" placeholder="separate with commas" class="form-control">
                 <br>
-                <span>
-                <button class="btn btn-light-sub">+ upload audio</button>
-                <button class="btn btn-light-sub">+ upload artwork</button>
-                </span>
-                <br><br>
+
+          
+
+                <label for="track-artwork">upload artwork</label>
+                    <input type="file" name="track-artwork" class="form-control">
+                <br>
+                <label for="track-audio">upload audio</label>
+                    <input type="file" name="track-audio" class="form-control">
+            
+                <br>
                 <label for="track-date">track date</label>
                     <input type="date" name="track-date" class="form-control">
         </div>
@@ -45,8 +50,10 @@
             <label for="private" class="non-modal">private</label>
             <br><br>
             <span>
+
                 <button class="btn btn-light-sub">save draft</button>
-                <button class="btn btn-light-sub">publish</button>
+                <button type="submit" class="btn btn-light-sub">publish</button>
+
             </span>    
             </form>
         </div>
