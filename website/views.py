@@ -35,6 +35,24 @@ def edit_tracks():
 
     return render_template("edit_track.html", tracks=tracks_to_edit)
 
+@views.route('/edit-tracks', methods = ['POST'])
+def add_track_form():
+    artist = 'none'
+    name = request.form['track-name']
+    description = request.form['track-description']
+    genre = request.form['track-genre']
+    audio = True
+    artwork = 'none'
+    pricing = request.form['pricing']
+    date = request.form['track-date']
+    credit = request.form['track-credits']
+    privacy = True
+
+    new_track = dbq.add_track(artist, name, description, genre, audio, artwork, pricing, date, credit, privacy)
+    tracks_to_edit = dbq.get_tracks()
+    return render_template('edit_track.html', tracks=tracks_to_edit)
+
+
 @views.route('/add-shows')
 def add_shows():
     return render_template("new_show.html")
