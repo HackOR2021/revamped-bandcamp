@@ -10,6 +10,8 @@ import website.queries as dbq
 
 views = Blueprint('views', __name__)
 
+# Fan routes
+
 @views.route('/')
 def home():
 
@@ -18,6 +20,12 @@ def home():
     db_tracks = dbq.get_ten_tracks()
     db_shows = dbq.get_ten_shows()
     return render_template("index.html", artists = db_artists, tracks=db_tracks, shows=db_shows)
+
+@views.route('/fan-dashboard')
+def fan_dashboard():
+    return render_template('fan_dashboard.html')
+
+# Artist routes
 
 @views.route('/artist-home')
 def artist_home():
