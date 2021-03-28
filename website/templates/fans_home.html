@@ -1,0 +1,68 @@
+{% extends "fan_base.html" %} {% block title %}fan home{% endblock %}
+
+{% block content %}
+
+
+<div class="container" id="fan-home-page">
+<h1>home</h1>
+<hr>
+<div class="container testimonial-group">
+	<h3>highlighted artists</h3>
+  <div class="row text-center">
+    {% for artist in artists %}
+
+		<div class="col-4 card">
+			<h5><strong>{{ artist["first_name"] }} {{ artist["last_name"] }}</strong></h5>
+			<span><b>website:</b> {{ artist["website"] }}</span>
+			<span><b>location:</b> {{ artist["city"] }}, {{ artist["state"] }}</span>
+            <br>
+
+			<!-- <img src="{{ artist["profile_image"] }}" width="50" height="50"> -->
+		</div>
+
+	{% endfor %}
+  </div>
+</div>
+
+<br>
+<hr>
+<h3>highlighted tracks</h3>
+<div class="container testimonial-group">
+  <div class="row text-center">
+    {% for track in tracks %}
+
+		<div class="col-4 card">
+			<h5>{{ track["track_name"] }}</h5>
+			<h6><b>by:</b> {{ track["track_artist"] }}</h6>
+			<span><b>description:</b> {{ track["track_description"] }}</span>
+			<span><b>genre:</b> {{ track["track_genre"] }}</span>
+			<span><b>price:</b> ${{ track["track_pricing"] }}</span>
+			<span><b>release date:</b> {{ track["track_date"] }}</span>
+		</div>
+
+	{% endfor %}
+  </div>
+</div>
+<br>
+<hr>
+<h3>upcoming shows</h3>
+<div class="container testimonial-group">
+  <div class="row text-center">
+    {% for show in shows %}
+
+		<div class="col-4 card">
+			<h5>{{ show["show_name"] }}</h5>
+			<h6>{{ show["show_artist"] }}</h6>
+			<span>{{ show["show_description"] }}</span>
+            <br>
+			<h6><b>when:</b> {{ show["show_date"] }}: {{ show["show_time"] }}</h6>
+			<p><b>link:</b> <a href="">{{ show["show_link"] }}</a></p>
+		</div>
+
+	{% endfor %}
+  </div>
+</div>
+</div>
+
+
+{% endblock %}
