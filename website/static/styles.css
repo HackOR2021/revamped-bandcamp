@@ -6,7 +6,9 @@ body {
     color: #9776dc;
 }
 
-
+hr {
+    color:#221d2b;
+}
 .bg-light {
     background-color: #9776dc !important;
 }
@@ -114,6 +116,16 @@ footer div {
 .dash-titles {
     margin-bottom: 0;
 }
+
+.card-body {
+    background:#9776dc;
+    border: none;
+}
+
+.card-body p {
+    color: #221d2b;
+}
+
 
 /* || Edit tracks (artist) */
 
