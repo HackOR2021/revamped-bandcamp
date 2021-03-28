@@ -1,0 +1,75 @@
+{% extends "fan_base.html" %} {% block title %}fan dashboard{% endblock %}
+
+{% block content %}
+<h1>dashboard</h1>
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h5 class='dash-titles'>artist activity feed</h5>
+            <span class='sub-text'>based on artists you've liked</span>
+            <div class="card" style="width: 90%;">
+                <div class="card-body">
+                    <p><strong>mimi</strong> added a new track</p>
+                    <hr>
+                    <p><strong>mimi</strong> added a new show</p>
+                    <hr>
+                    <p><strong>lil lua</strong> added a new album</p>
+                    <hr>
+                    <p><strong>lil lua</strong> added a new album</p>
+                </div>
+              </div>
+
+        </div>
+        <div class="col-md-4">
+            <h5 class="dash-titles">jump back in</h5>
+            <span class='sub-text'>your recent favs</span>
+            <div class="card" style="width: 90%;">
+                <div class="card-body">
+                  <p><strong>ruby off railz</strong> | mimi</p>
+                  <hr>
+                  <p><strong>ruby off railz</strong> | mimi</p>
+                  <hr>
+                  <p><strong>ruby off railz</strong> | mimi</p>
+                  <hr>
+                  <p><strong>ruby off railz</strong> | mimi</p>
+                  <hr>
+                </div>
+              </div>
+
+        </div>
+        <div class="col-md-4">
+            <h5 class="dash-titles">upcoming shows</h5>
+            <span class='sub-text'>based on your likes and favs</span>
+            <div class="row">
+                <div class="card" style="width: 90%;">
+                    <div class="card-body">
+                        <p><strong>mimi</strong> posted a new show - django unchained</p>
+                        <p><strong>lil lua</strong> posted a new show - tiny desk show</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card" style="width: 90%;">
+                        <div class="card-body">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

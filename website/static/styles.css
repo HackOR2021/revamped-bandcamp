@@ -4,6 +4,10 @@ body {
     font-family: helvetica;
 }
 
+.sub-text {
+    font-size: 0.75rem;
+}
+
 /* || Sitewide - Footer */
 
 footer {
@@ -24,6 +28,12 @@ footer div {
 .page-container {
     position: relative;
     min-height: 100vh;
+}
+
+/* || Dashboard pages */
+
+.dash-titles {
+    margin-bottom: 0;
 }
 
 /* || Edit tracks (artist) */
