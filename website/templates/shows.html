@@ -1,0 +1,25 @@
+{% extends "fan_base.html" %} {% block title %}shows{% endblock %}
+
+{% block content %}
+<h1>shows</h1>
+<hr>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+{% for show in shows %}
+
+<div class="col">
+    <div class="card" style="width: 90%;">
+        <div class="card-body">
+            <center>
+                <p><strong>{{ show["show_name"]}}</strong></p>
+                <p><strong>artist: </strong>{{ show["show_artist"] }}</p>
+                <p><strong>date: </strong>{{ show["show_date"] }}</p>
+                <p><strong>time: </strong>{{ show["show_time"] }}</p>
+            </center>
+        </div>
+      </div>
+
+</div>
+
+{% endfor %}
+</div>
+{% endblock %}

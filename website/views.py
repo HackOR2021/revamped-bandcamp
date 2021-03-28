@@ -34,6 +34,11 @@ def artists():
     db_artists = dbq.get_artists()
     return render_template('artists.html', artists= db_artists)
 
+@views.route('/shows')
+def shows():
+    db_shows = dbq.get_shows()
+    return render_template('shows.html', shows = db_shows)
+
 # Artist routes
 
 @views.route('/artist-home')
