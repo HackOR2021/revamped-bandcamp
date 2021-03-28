@@ -25,6 +25,10 @@ def home():
 def fan_dashboard():
     return render_template('fan_dashboard.html')
 
+@views.route('/landing')
+def landing_page():
+    return render_template('landing_page.html')
+
 # Artist routes
 
 @views.route('/artist-home')
