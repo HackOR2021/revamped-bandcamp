@@ -45,12 +45,19 @@ def edit_tracks():
 
 @views.route('/edit-tracks', methods = ['POST'])
 def add_track_form():
+    print(request.files)
+    if 'track_artwork' in request.files:
+        track_artwork = request.files['track_artwork']
+        mongo.save_file(track_artwork.filename, track_artwork)
+        artwork = track_artwork.filename
+    else:
+        artwork = ""
+
     artist = 'none'
     name = request.form['track-name']
     description = request.form['track-description']
     genre = request.form['track-genre']
     audio = True
-    artwork = 'none'
     pricing = request.form['pricing']
     date = request.form['track-date']
     credit = request.form['track-credits']
@@ -90,5 +97,6 @@ def create():
         dbq.save_to_db(file=album_cover, name=album_name)
 
     return render_template("upload_test.html")
+
 
 
