@@ -1,5 +1,53 @@
 {% extends "artist_base.html" %} {% block title %}Artist Home{% endblock %}
 
 {% block content %}
-<h1>This is the artist homepage</h1>
+<h1>dashboard</h1>
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h5 class='dash-titles'>your recent tracks</h5>
+            <br>
+            <div class="card" style="width: 90%;">
+                <div class="card-body">
+                    <p><strong>mimi</strong> added a new track</p>
+                    <hr>
+                    <p><strong>mimi</strong> added a new show</p>
+                    <hr>
+                    <p><strong>lil lua</strong> added a new album</p>
+                    <hr>
+                    <p><strong>lil lua</strong> added a new album</p>
+                </div>
+              </div>
+
+        </div>
+        <div class="col-md-4">
+            <h5 class="dash-titles">your recent albums</h5>
+            <br>
+            <div class="card" style="width: 90%;">
+                <div class="card-body">
+                  <p><strong>soundscapes</strong> | mimi</p>
+                  <hr>
+                </div>
+              </div>
+
+        </div>
+        <div class="col-md-4">
+            <h5 class="dash-titles">upcoming shows</h5>
+            <br>
+            <div class="row">
+                <div class="card" style="width: 90%;">
+                    <div class="card-body">
+                        <p>djano unchained show #1</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
