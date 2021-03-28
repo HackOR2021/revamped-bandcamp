@@ -126,6 +126,10 @@ footer div {
     color: #221d2b;
 }
 
+/* || Homepage (fans) */
+#fan-home-page h4, hr {
+    color: #9776dc;
+}
 
 /* || Edit tracks (artist) */
 

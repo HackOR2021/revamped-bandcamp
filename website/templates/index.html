@@ -1,12 +1,13 @@
-{% extends "fan_base.html" %} {% block title %}Fan Home{% endblock %}
+{% extends "fan_base.html" %} {% block title %}fan home{% endblock %}
 
 {% block content %}
-<h1>This is the fan homepage</h1>
 
 
-
-<h4>Highlighted Artists</h4>
+<div class="container" id="fan-home-page">
+<h1>home</h1>
+<hr>
 <div class="container testimonial-group">
+	<h4>highlighted artists</h4>
   <div class="row text-center">
     {% for artist in artists %}
 
@@ -23,8 +24,8 @@
   </div>
 </div>
 
-
-<h4>Highlighted Tracks</h4>
+<br>
+<h4>highlighted tracks</h4>
 <div class="container testimonial-group">
   <div class="row text-center">
     {% for track in tracks %}
@@ -42,8 +43,8 @@
   </div>
 </div>
 
-
-<h4>Upcoming Shows</h4>
+<br>
+<h4>upcoming shows</h4>
 <div class="container testimonial-group">
   <div class="row text-center">
     {% for show in shows %}
@@ -58,6 +59,7 @@
 
 	{% endfor %}
   </div>
+</div>
 </div>
 
 
