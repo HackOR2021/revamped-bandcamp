@@ -29,6 +29,11 @@ def fan_dashboard():
 def landing_page():
     return render_template('landing_page.html')
 
+@views.route('/artists')
+def artists():
+    db_artists = dbq.get_artists()
+    return render_template('artists.html', artists= db_artists)
+
 # Artist routes
 
 @views.route('/artist-home')
@@ -81,6 +86,24 @@ def edit_shows():
 
     shows_to_edit = dbq.get_ten_shows()
     return render_template('edit_show.html', shows=shows_to_edit)
+
+@views.route('/edit-shows', methods = ['POST'])
+def add_show_form():
+    artist = "none"
+    name = request.form['show-name']
+    description = request.form['show-description']
+    genre = request.form['show-genre']
+    link = request.form['show-link']
+    date = request.form['show-date']
+    time = request.form['show-time']
+    pricing = request.form['pricing']
+
+    new_show = dbq.add_show(date, time, name, artist, description, link)
+    shows_to_edit = dbq.get_shows()
+    
+    return render_template('edit_show.html', shows=shows_to_edit)
+
+
 
 @views.route('/view-tracks')
 def view_tracks():
