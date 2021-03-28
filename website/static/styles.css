@@ -168,3 +168,52 @@ footer div {
 .col-xs-4:nth-child(3n+1) { background: #c69; }
 .col-xs-4:nth-child(3n+2) { background: #9c6; }
 .col-xs-4:nth-child(3n+3) { background: #69c; }
+
+/* landing */
+.landing h1 {
+    display: inline;
+    font-size: 5vmin;;
+}
+
+.landing img {
+    height: 10em;
+}
+
+.landing circle {
+    background-color:#221d2b;
+    color:rgba(151, 118, 220, 0.7);
+}
+
+
+.landing body {
+    background-image: url(/website/static/ellipse.svg);
+}
+
+.landing h2 {
+    color: #9776dc;
+    font-size: 9vmin;
+}
+
+div.landing {
+    margin-top: 10%;
+}
+
+.btn-cta {
+    background: #e1e1e1;
+    color: #7000ff;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 1.5 3vmin;
+    font-size: 3vmin;
+}
+
+.btn-cta:hover {
+    background: #c0c0c0;
+    color:#7000ff;
+}
+
+button.btn.btn-cta {
+    margin: auto 0;
+    align-content: center;
+    margin-left: 50%;
+}
