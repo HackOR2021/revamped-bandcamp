@@ -192,6 +192,52 @@ def add_artist(first_name, last_name, email, website, city, state, profile_image
     return db.tracks.insert_one(new_artist)
 
 
+def update_fan(fan_id_to_update, updated_fan_parameters):
+    # Updates the existing data for a current fan
+    db = connect_minerva_db()
+    db.fans.save({"_id": ObjectId(fan_id_to_update)}, updated_fan_parameters)
+
+
+def update_artist(artist_id_to_update, updated_artist_parameters):
+    # Updates the existing data for a current artist
+    db = connect_minerva_db()
+    db.artists.save({"_id": ObjectId(artist_id_to_update)}, updated_artist_parameters)
+
+
+def update_show(show_id_to_update, updated_show_parameters):
+    # Updates the existing data for a current show
+    db = connect_minerva_db()
+    db.shows.save({"_id": ObjectId(show_id_to_update)}, updated_show_parameters)
+
+
+def update_track(track_id_to_update, updated_track_parameters):
+    # Updates the existing data for a current track
+    db = connect_minerva_db()
+    db.tracks.save({"_id": ObjectId(track_id_to_update)}, updated_track_parameters)
+
+
+
+def delete_fan(fan_id_to_remove):
+    # removed the provided fan from the database
+    db = connect_minerva_db()
+    db.fans.deleteOne({"_id": ObjectId(fan_id_to_remove)})
+    
+def delete_artist(artist_id_to_remove):
+    # removed the provided artist from the database
+    db = connect_minerva_db()
+    db.artists.deleteOne({"_id": ObjectId(artist_id_to_remove)})
+    
+def delete_show(show_id_to_remove):
+    # removed the provided show from the database
+    db = connect_minerva_db()
+    db.shows.deleteOne({"_id": ObjectId(show_id_to_remove)})
+    
+def delete_track(track_id_to_remove):
+    # removed the provided track from the database
+    db = connect_minerva_db()
+    db.tracks.deleteOne({"_id": ObjectId(track_id_to_remove)})
+    
+
 
 def save_to_db(file, name):
     """
