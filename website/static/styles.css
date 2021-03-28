@@ -2,7 +2,86 @@
 
 body {
     font-family: helvetica;
+    background: #221d2b;
+    color: #9776dc;
 }
+
+
+.bg-light {
+    background-color: #9776dc !important;
+}
+
+
+.form-control {
+    background-color: rgba(151, 118, 220, 0.7);
+}
+
+.form-control:focus {
+    background: rgba(151, 118, 220, 0.9);
+}
+
+.form-control::placeholder {
+    color: #221d2b;
+}
+
+.form-control::-webkit-input-placeholder {
+    color:#221d2b;
+}
+
+.form-control::-moz-placeholder {
+    color:#221d2b;
+}
+
+.form-text {
+    color:#221d2b;
+}
+
+/* || Sitewide - modal */
+.modal-body, .modal-header, .modal-footer {
+    background: #9776dc;
+}
+
+button.btn-close {
+    color:#9776dc;
+}
+
+.btn-light {
+    color: #221d2b;
+    background-color: #9776dc;
+    border: none;
+}
+
+.btn-light-sub {
+    color: #221d2b;
+    background-color: #e5afff;
+    border: none;
+}
+.btn-light-sub:hover {
+    color: #221d2b;
+    background-color: #c793df;
+    border: none;
+}
+
+.btn-light:hover {
+    background-color:rgba(151, 118, 220, 0.7);
+}
+
+.btn-dark {
+    background: #221d2b;
+}
+
+label {
+    color: #221d2b;
+}
+
+label.non-modal {
+    color:#9776dc;
+}
+
+h4 {
+    color: #221d2b;
+}
+
 
 .sub-text {
     font-size: 0.75rem;

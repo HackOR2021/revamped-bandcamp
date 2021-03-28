@@ -10,7 +10,7 @@
               <br>
               <!-- Button for each track -->
               {% for track in tracks %}
-              <button class="btn btn-dark edit-btns" data-bs-toggle="modal" data-bs-target="#modal{{ track['_id'] }}">
+              <button class="btn btn-light edit-btns" data-bs-toggle="modal" data-bs-target="#modal{{ track['_id'] }}">
 
                   {{ track["track_name"] }}
               </button>
@@ -20,7 +20,7 @@
           <div class="col-md-6">
               <span>albums</span>
               <br>
-              <button class="btn btn-dark edit-btns">lua-ve is in the air tonight</button>
+              <button class="btn btn-light edit-btns">lua-ve is in the air tonight</button>
           </div>
         
     </div>
@@ -32,7 +32,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">edit track details</h5>
+          <h4 class="modal-title" id="exampleModalLabel">edit track details</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -50,8 +50,8 @@
                         <input type="text" name="track-genre" class="form-control" placeholder="{{ track['track_genre'] }}">
                         <br>
                         <span>
-                          <button class="btn btn-dark">+ edit audio</button>
-                          <button class="btn btn-dark">+ edit artwork</button>
+                          <button class="btn btn-light-sub">+ edit audio</button>
+                          <button class="btn btn-light-sub">+ edit artwork</button>
                         </span>
                         <br><br>
 
@@ -88,8 +88,8 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-dark">save draft</button>
-          <button type="button" class="btn btn-dark">publish</button>
+          <button type="button" class="btn btn-light-sub">save draft</button>
+          <button type="button" class="btn btn-light-sub">publish</button>
         </div>
       </div>
     </div>

@@ -16,6 +16,9 @@
                 <label for="track-genre">track genre</label>
                     <input type="text" name="track-genre" placeholder="separate with commas" class="form-control">
                 <br>
+
+          
+
                 <label for="track-artwork">upload artwork</label>
                     <input type="file" name="track-artwork" class="form-control">
                 <br>
@@ -42,13 +45,15 @@
                 <input type="text" name="track-credits" placeholder="who helped make this smash?" class="form-control">
             <br>
             <input type="radio" name="privacy" id="public" value="public">
-            <label for="public">public</label>
+            <label for="public" class="non-modal">public</label>
             <input type="radio" name="privacy" id="private" value="private">
-            <label for="private">private</label>
+            <label for="private" class="non-modal">private</label>
             <br><br>
             <span>
-                <button class="btn btn-dark">save draft</button>
-                <button type="submit" class="btn btn-dark">publish</button>
+
+                <button class="btn btn-light-sub">save draft</button>
+                <button type="submit" class="btn btn-light-sub">publish</button>
+
             </span>    
             </form>
         </div>
