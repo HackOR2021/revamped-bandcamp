@@ -38,6 +38,11 @@ hr {
     color:#221d2b;
 }
 
+.last-link {
+    width: 12%;
+}
+
+
 /* || Sitewide - modal */
 .modal-body, .modal-header, .modal-footer {
     background: #9776dc;
