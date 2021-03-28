@@ -42,6 +42,17 @@ hr {
     width: 12%;
 }
 
+/* || Sitewide - navbar */
+
+.dropdown-menu {
+    background-color: #9776DC;
+    color: #221d2b;
+}
+
+.dropdown-menu:hover {
+    background-color: #9776dc;
+}
+
 
 /* || Sitewide - modal */
 .modal-body, .modal-header, .modal-footer {
