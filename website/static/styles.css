@@ -2,6 +2,107 @@
 
 body {
     font-family: helvetica;
+    background: #221d2b;
+    color: #9776dc;
+}
+
+hr {
+    color:#221d2b;
+}
+.bg-light {
+    background-color: #9776dc !important;
+}
+
+
+.form-control {
+    background-color: rgba(151, 118, 220, 0.7);
+}
+
+.form-control:focus {
+    background: rgba(151, 118, 220, 0.9);
+}
+
+.form-control::placeholder {
+    color: #221d2b;
+}
+
+.form-control::-webkit-input-placeholder {
+    color:#221d2b;
+}
+
+.form-control::-moz-placeholder {
+    color:#221d2b;
+}
+
+.form-text {
+    color:#221d2b;
+}
+
+.last-link {
+    width: 12%;
+}
+
+/* || Sitewide - navbar */
+
+.dropdown-menu {
+    background-color: #9776DC;
+    color: #221d2b;
+}
+
+.dropdown-menu:hover {
+    background-color: #9776dc;
+}
+
+
+/* || Sitewide - modal */
+.modal-body, .modal-header, .modal-footer {
+    background: #9776dc;
+}
+
+button.btn-close {
+    color:#9776dc;
+}
+
+.btn-light {
+    color: #221d2b;
+    background-color: #9776dc;
+    border: none;
+}
+
+.btn-light-sub {
+    color: #221d2b;
+    background-color: #e5afff;
+    border: none;
+}
+.btn-light-sub:hover {
+    color: #221d2b;
+    background-color: #c793df;
+    border: none;
+}
+
+.btn-light:hover {
+    background-color:rgba(151, 118, 220, 0.7);
+}
+
+.btn-dark {
+    background: #221d2b;
+}
+
+label {
+    color: #221d2b;
+}
+
+label.non-modal {
+    color:#9776dc;
+}
+
+h4 {
+    color: #221d2b;
+}
+
+
+.sub-text {
+    font-size: 0.75rem;
 }
 
 /* || Sitewide - Footer */
@@ -11,10 +112,11 @@ footer {
     bottom: 0;
     width: 100%;
     height: 5rem;
+    background-color: #9776dc;
 }
 
 footer div {
-    color: white;
+    color: #221d2b;
 }
 
 .content-wrap {
@@ -24,6 +126,61 @@ footer div {
 .page-container {
     position: relative;
     min-height: 100vh;
+}
+
+/* || Dashboard pages */
+
+.dash-titles {
+    margin-bottom: 0;
+}
+
+.card-body {
+    background:#9776dc;
+    border: none;
+}
+
+.card-body p {
+    color: #221d2b;
+}
+
+/* || Homepage (fans) */
+#fan-home-page h4, hr {
+    color: #9776dc;
+}
+
+#fan-home-page .card {
+    background-color: #221d2b;
+    border-color: #9776dc;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem
+}
+
+/* Scrollbar from: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+/* width */
+.testimonial-group ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .testimonial-group ::-webkit-scrollbar-track {
+    background: #9776DC; 
+  }
+   
+  /* Handle */
+  .testimonial-group ::-webkit-scrollbar-thumb {
+    background: black; 
+  }
+  
+  /* Handle on hover */
+  .testimonial-group ::-webkit-scrollbar-thumb:hover {
+    background: #7000FF; 
+  }
+
+/* || New Show and Track (fans) */
+
+.edit-pgs label {
+    color: #9776dc;
 }
 
 /* || Edit tracks (artist) */
@@ -52,3 +209,52 @@ footer div {
 .col-xs-4:nth-child(3n+1) { background: #c69; }
 .col-xs-4:nth-child(3n+2) { background: #9c6; }
 .col-xs-4:nth-child(3n+3) { background: #69c; }
+
+/* landing */
+.landing h1 {
+    display: inline;
+    font-size: 5vmin;;
+}
+
+.landing img {
+    height: 10em;
+}
+
+.landing circle {
+    background-color:#221d2b;
+    color:rgba(151, 118, 220, 0.7);
+}
+
+
+.landing body {
+    background-image: url(/website/static/ellipse.svg);
+}
+
+.landing h2 {
+    color: #9776dc;
+    font-size: 9vmin;
+}
+
+div.landing {
+    margin-top: 10%;
+}
+
+.btn-cta {
+    background: #e1e1e1;
+    color: #7000ff;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 1.5 3vmin;
+    font-size: 3vmin;
+}
+
+.btn-cta:hover {
+    background: #c0c0c0;
+    color:#7000ff;
+}
+
+button.btn.btn-cta {
+    margin: auto 0;
+    align-content: center;
+    margin-left: 50%;
+}

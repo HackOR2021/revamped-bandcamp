@@ -1,0 +1,20 @@
+{% extends "fan_base.html" %} {% block title %}artists{% endblock %}
+
+{% block content %}
+<h1>artists</h1>
+<hr>
+<div class="row row-cols-1 row-cols-md-5 g-4">
+{% for artist in artists %}
+
+<div class="col">
+    <div class="card" style="width: 90%;">
+        <div class="card-body">
+            <center><p><strong>{{ artist["first_name"]}} {{ artist["last_name"] }}</strong></p></center>
+        </div>
+      </div>
+
+</div>
+
+{% endfor %}
+</div>
+{% endblock %}

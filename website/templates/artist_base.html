@@ -7,6 +7,8 @@
 
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
 
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
         <script
              src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -21,7 +23,7 @@
         <title>{% block title %}Home{% endblock %}</title>
     </head>
     <body>
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
            <button 
             class="navbar-toggler" 
             type="button" 
@@ -36,18 +38,15 @@
                    <li class="nav-item">
                         <a class="nav-link" id="login" href="/artist-home">home</a>
                    </li>
-                   <li class="nav-item">
-                        <a class="nav-link" id="dashboard" href="/dashboard">dashboard</a>
-                   </li>
+                   
                    <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       tracks
                     </a>
     
                     <ul class="dropdown-menu m-0" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">view your tracks</a></li>
                       <li><a class="dropdown-item" href="/add-tracks">add tracks</a></li>
-                      <li><a class="dropdown-item" href="/edit-tracks">edit tracks</a></li>
+                      <li><a class="dropdown-item" href="/edit-tracks">view edit tracks</a></li>
                     </ul>
     
                   </li>
@@ -57,14 +56,20 @@
                     </a>
     
                     <ul class="dropdown-menu m-0" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/workorders">view your shows</a></li>
                       <li><a class="dropdown-item" href="/add-shows">add shows</a></li>
-                      <li><a class="dropdown-item" href="/edit-shows">edit shows</a></li>
+                      <li><a class="dropdown-item" href="/edit-shows">view and edit shows</a></li>
                     </ul>
     
                   </li>
                    
                </ul>
+               <div class="d-flex flex-row-reverse last-link">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100"> 
+                  <li class="nav-item">
+                      <a class="nav-link ml-auto" href="/fans-home">go to fan site</a>
+                  </li>
+              </ul>
+           </div>
            </div>
        </nav>
 
@@ -74,7 +79,7 @@
             {% endblock %}
            </div>
 
-           <footer class="bg-dark text-center text-lg-start">
+           <footer class="text-center text-lg-start">
             <div class="text-center p-3">
               © 2021 minerva
             </div>

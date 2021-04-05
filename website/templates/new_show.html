@@ -3,10 +3,10 @@
 {% block content %}
 <h1>new show</h1>
 <hr>
-<div class="container">
+<div class="container edit-pgs">
     <div class="row">
         <div class="col-md-6">
-            <form method="POST">
+            <form method="POST" action="edit-shows">
                 <label for="show-name">show name</label>
                     <input type="text" name="show-name" placeholder="enter show title" class="form-control">
                 <br>
@@ -17,9 +17,6 @@
                     <input type="text" name="show-genre" placeholder="separate with commas" class="form-control">
                 <br>
                 
-                <label for="track-date">track date</label>
-                    <input type="date" name="track-date" class="form-control">
-                <br>
                 <label for="show-link">show live link</label>
                     <input type="text" name="show-link" placeholder="paste link here" class="form-control">
                 <br>
@@ -41,13 +38,13 @@
                 <span>*leave price empty for free entry</span>
             <br><br>
             <input type="radio" name="privacy" id="public" value="public">
-            <label for="public">public</label>
+            <label for="public" class="non-modal">public</label>
             <input type="radio" name="privacy" id="private" value="private">
-            <label for="private">private</label>
+            <label for="private" class="non-modal">private</label>
             <br><br>
             <span>
-                <button class="btn btn-dark">save draft</button>
-                <button class="btn btn-dark">publish</button>
+                <button class="btn btn-light-sub">save draft</button>
+                <button type="submit" class="btn btn-light-sub">publish</button>
             </span>    
             </form>
         </div>
