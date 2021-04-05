@@ -19,17 +19,18 @@ This project was built for the [2021 HackOR Hackathon](https://devpost.com/softw
 <!-- ### Built With -->
 ### Designed and Built With
 * [Adobe XD](https://www.adobe.com/products/xd.html): vector based user design and experience tool for web/mobile applications.
-* 
 * [Mockeroo](https://www.mockaroo.com/): a test data generator and API mocking tool
-* 
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/): a backend framework for Python used to develop web applications. 
 * [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/): a Python framework for responsive web styling.
-* 
 * [MongoDB](https://dev.mysql.com/doc/): a distributed, document-based NoSQL database system.
-* 
 * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas): a cloud database service used to deploy and operate MongoDB databases.
-* 
 * [Amazon Web Services](https://aws.amazon.com/about-aws/): secure cloud based service platform used to store databases, deliver content and provide computing power.
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Our HackOR video submission can be found on Youtube by clicking the following image:  
+[![Minerva HackOR 2021 Video](https://img.youtube.com/vi/soAcNdbTH3s/0.jpg)](https://www.youtube.com/watch?v=soAcNdbTH3s)
 
 
 <!-- GETTING STARTED -->
@@ -78,11 +79,6 @@ python run.py
 7. On your browser, navigate to `http://localhost:5000/`. This will update to saved changes in your local directory upon refresh.
 8. Occasionally, some of the built-in resources (particularly the javascript scripts) of this project do not update when reloading changes made to files. To bypass these errors, reload the web page and bypass the cache. This can be done using the `Shift + left click Reload button` on Firefox or by entering developer mode on Google Chrome and selecting the `Empty Cache and Hard Reload` option.
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-[![Minerva HackOR 2021 Video](https://img.youtube.com/vi/soAcNdbTH3s/0.jpg)](https://www.youtube.com/watch?v=soAcNdbTH3s)
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -126,8 +122,10 @@ Project Link: [https://github.com/HackOR2021/revamped-bandcamp/issues](https://g
 
 * [othneildrew](https://github.com/othneildrew) for creating the [template README file](https://github.com/othneildrew/Best-README-Template) that was used as the starting point for the README for this project. 
 
-
-
+## Asset Credits
+* Photos used in Adobe XD were teammate Michelle's personal photos.
+* Video submission used licenced stock after effects files.
+* Michelle has a pro sub for from Envato Elements Music and icons were also properly licensed from Envato Elements from Michelle's pro sub.
 
 
 <!-- MARKDOWN LINKS & IMAGES (to be added as needed) -->
