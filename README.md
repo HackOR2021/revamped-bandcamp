@@ -28,6 +28,7 @@ This project was built for the [2021 HackOR Hackathon](https://devpost.com/softw
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+![ Minerva Use](use.gif)/ ! [](use.gif)
 
 Our HackOR video submission can be found on Youtube by clicking the following image:  
 [![Minerva HackOR 2021 Video](https://img.youtube.com/vi/soAcNdbTH3s/0.jpg)](https://www.youtube.com/watch?v=soAcNdbTH3s)
